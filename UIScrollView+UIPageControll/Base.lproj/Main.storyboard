@@ -28,7 +28,7 @@
                                 <color key="currentPageIndicatorTintColor" red="0.25098039220000001" green="0.4823529412" blue="0.97254901959999995" alpha="0.90000000000000002" colorSpace="deviceRGB"/>
                             </pageControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kku-iI-a2P">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="825"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="3QX-yo-i8w">
                                     <size key="itemSize" width="50" height="50"/>
@@ -51,21 +51,40 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="dWq-x2-cgI"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXH-w9-utN">
+                                <rect key="frame" x="157" y="772" width="100" height="45"/>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.4823529412" blue="0.97254901959999995" alpha="0.90000000000000002" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="AoC-ZW-E2U"/>
+                                    <constraint firstAttribute="height" constant="45" id="S3n-G0-UWE"/>
+                                </constraints>
+                                <state key="normal" title="次へ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="2ef-J1-FhD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="1Hk-iy-Diq"/>
-                            <constraint firstItem="2ef-J1-FhD" firstAttribute="top" secondItem="Kku-iI-a2P" secondAttribute="bottom" id="ByU-fP-n1V"/>
                             <constraint firstItem="Kku-iI-a2P" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HEu-k3-wfF"/>
                             <constraint firstItem="2ef-J1-FhD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MFM-71-LJ6"/>
+                            <constraint firstItem="lXH-w9-utN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aad-vl-oSV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kku-iI-a2P" secondAttribute="trailing" id="hie-zP-3Ux"/>
                             <constraint firstItem="Kku-iI-a2P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="keA-Ey-SYg"/>
+                            <constraint firstItem="lXH-w9-utN" firstAttribute="top" secondItem="Kku-iI-a2P" secondAttribute="bottom" constant="8" id="m3h-Ou-SWt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ef-J1-FhD" secondAttribute="trailing" id="mA9-jX-2GK"/>
+                            <constraint firstItem="2ef-J1-FhD" firstAttribute="top" secondItem="lXH-w9-utN" secondAttribute="bottom" constant="8" id="zP6-FA-gjc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Kku-iI-a2P" id="0MY-hj-kRq"/>
+                        <outlet property="nextButton" destination="lXH-w9-utN" id="Min-CT-rSW"/>
                         <outlet property="pageControll" destination="2ef-J1-FhD" id="TMf-aq-nK6"/>
                     </connections>
                 </viewController>
